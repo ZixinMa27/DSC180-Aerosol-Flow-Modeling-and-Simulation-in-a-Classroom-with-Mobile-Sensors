@@ -1,1 +1,1 @@
-# capstone_proj_temp
+# capstone_project
