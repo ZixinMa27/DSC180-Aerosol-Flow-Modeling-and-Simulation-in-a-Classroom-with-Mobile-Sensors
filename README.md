@@ -9,3 +9,6 @@ In light of the significant impact of COVID-19, it is crucial for individuals to
 1. Data Collection APP https://github.com/tanjidt/hdsi-capstone-project [private]
 2. https://github.com/tanjidt/aerosol-models [private]
 3. Thermal Image Analysis: https://github.com/kavetinaveen/Thermal_Image_Processing 
+
+### Build instruction:
+`python src/models/compartment_model/run.py`

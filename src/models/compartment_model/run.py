@@ -19,7 +19,7 @@ def get_init_vals(Cp, Cs):
 
 
 if __name__ == '__main__':
-    config_path = 'config.yaml'
+    config_path = 'src/models/compartment_model/config.yaml'
     with(open(config_path)) as conf_file:
         config = yaml.safe_load(conf_file)
 
@@ -36,8 +36,8 @@ if __name__ == '__main__':
     cough_model = AerosolSourceSimulation('cough', np.linspace(0, 1, 240))
 
     y_points = [cough_model.get_rate(t) for t in  np.linspace(0, 1, 240)]
-    plt.plot( np.linspace(0, 1, 240), y_points , '-', label='Count')
-    plt.show()
+    #plt.plot( np.linspace(0, 1, 240), y_points , '-', label='Count')
+    #plt.show()
 
     aerosol_gen_funcs = [AerosolSourceSimulation('cough', np.linspace(0, 1, 240)) for _ in range(3)]
     aerosol_gen_funcs.append(AerosolSourceSimulation('no_cough', np.linspace(0, 1, 240)))
@@ -62,5 +62,5 @@ if __name__ == '__main__':
     for i in range(config['model_params']['num_sub_compartment']):
         plt.plot(result.t, result.y[i+1], '--', label=f'Cs_{i+1}')
     plt.legend()
-    plt.savefig("forecast_aerosol_flow")
+    plt.savefig("src/visualization/forecast_aerosol_flow")
     plt.show()
