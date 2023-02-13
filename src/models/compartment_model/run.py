@@ -62,5 +62,5 @@ if __name__ == '__main__':
     for i in range(config['model_params']['num_sub_compartment']):
         plt.plot(result.t, result.y[i+1], '--', label=f'Cs_{i+1}')
     plt.legend()
-    plt.savefig("forecast_aerosol_flow")
+    plt.savefig("src/visualization/forecast_aerosol_flow")
     plt.show()
