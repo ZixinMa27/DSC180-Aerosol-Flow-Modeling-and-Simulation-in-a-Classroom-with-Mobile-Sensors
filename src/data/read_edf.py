@@ -50,7 +50,9 @@ def plot_pm_data(dataframes, plot_type="mass_conc"):
     handles, labels = ax[0].get_legend_handles_labels()
     fig.legend(handles, labels, loc='upper left')
     plt.subplots_adjust(left=None, bottom=None, right=.9, top=None, wspace=None, hspace=0.9)
+    plt.savefig("pm_data_visualization.png")
     plt.show()
+    
     # plotly_fig = tls.mpl_to_plotly(fig)
     # plotly_fig.show()
 
