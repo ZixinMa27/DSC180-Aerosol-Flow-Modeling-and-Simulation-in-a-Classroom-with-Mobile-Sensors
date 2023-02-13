@@ -1,0 +1,45 @@
+model_params_2c:
+  Vp: 25
+  Vs: 2
+  Q: 0.01
+  alpha: .8
+  beta: 0.2
+  aerosol_mass_gen_rate: 1
+init_vals_2c:
+  Cp: 0
+  Cs: 0
+# model_params:
+#   num_sub_compartment: 1
+#   Vp: 25
+#   Vs: [2]
+#   Q: 0.01
+#   alphas: [.8]
+#   betas: [0.2]
+#   aerosol_mass_gen_rates: [1]
+# init_vals:
+#   Cp: 0
+#   Cs: [10000]
+
+# model_params:
+#   num_sub_compartment: 2
+#   Vp: 25
+#   Vs: [2, 2]
+#   Q: 0.01
+#   alphas: [.8, 1]
+#   betas: [0.2, 0.1]
+#   aerosol_mass_gen_rates: [.1, 100]
+# init_vals:
+#   Cp: 0
+#   Cs: [10000, 0]
+
+model_params:
+  num_sub_compartment: 4
+  Vp: 25
+  Vs: [2, 2, 3, 2]
+  Q: 0.01
+  alphas: [0.15, .1, .2, .1]
+  betas: [0., 0., 0., 0]
+  aerosol_mass_gen_rates: [.1, 100, 5000, 0]
+init_vals:
+  Cp: 0
+  Cs: [0, 0, 0, 0]
