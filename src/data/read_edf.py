@@ -18,7 +18,7 @@ def plot_pm_data(dataframes, plot_type="mass_conc"):
     sensor_mapping = {'BC5F2E8BD0E9B21D':'680415', 'DA8590A0DD5EC12B':'6f7f19', 
                     '1837FE6A6AD70C29':'620512', '124BF175470BC117':'137f63', '033EBECC09FAA564':'110e60'}
 
-    fig, ax = plt.subplots(nrows=5, ncols=1, sharex=True, sharey=False)  
+    fig, ax = plt.subplots(nrows=5, ncols=1, sharex=True, sharey=True, figsize=(15, 13))  
     ax[-1].set_xlabel('Time')
     # ax.set_title('PM Sensor Reading')
 
@@ -45,19 +45,18 @@ def plot_pm_data(dataframes, plot_type="mass_conc"):
         # df = df.iloc[:200, :]
         ax[i].plot(df['Local_Date_Time'], df[data_cols_sensor], label=labels)
         ax[i].set_title(place_mapping[sensor_mapping[loc]], loc='right', y=1.0)
-        ax[i].set_ylabel("Concentration (μg/m3)", rotation=0)
+        ax[i].set_ylabel("Concentration (μg/m3)", rotation=90)
 
     handles, labels = ax[0].get_legend_handles_labels()
     fig.legend(handles, labels, loc='upper left')
-    plt.subplots_adjust(left=None, bottom=None, right=.9, top=None, wspace=None, hspace=.8)
+    plt.subplots_adjust(left=None, bottom=None, right=.9, top=None, wspace=None, hspace=0.9)
     plt.show()
     # plotly_fig = tls.mpl_to_plotly(fig)
     # plotly_fig.show()
 
 
 
-file_paths = [f for f in glob.glob('/data/*')]
-print(file_paths)
+file_paths = [f for f in glob.glob('../data/pm_data/*.edf')]
 data_frames = {}
 
 for _file in file_paths:
