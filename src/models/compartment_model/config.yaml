@@ -33,13 +33,13 @@ init_vals_2c:
 #   Cs: [10000, 0]
 
 model_params:
-  num_sub_compartment: 4
+  num_sub_compartment: 1
   Vp: 25
-  Vs: [2, 2, 3, 2]
+  Vs: [2]
   Q: 0.01
-  alphas: [0.15, .1, .2, .1]
-  betas: [0., 0., 0., 0]
-  aerosol_mass_gen_rates: [.1, 100, 5000, 0]
+  alphas: [0.15]
+  betas: [0.]
+  aerosol_mass_gen_rates: [.1]
 init_vals:
   Cp: 0
-  Cs: [0, 0, 0, 0]
+  Cs: [0]

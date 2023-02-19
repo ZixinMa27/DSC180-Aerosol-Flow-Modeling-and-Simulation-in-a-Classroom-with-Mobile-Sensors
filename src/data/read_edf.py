@@ -18,7 +18,7 @@ def plot_pm_data(dataframes, plot_type="mass_conc"):
     sensor_mapping = {'BC5F2E8BD0E9B21D':'680415', 'DA8590A0DD5EC12B':'6f7f19', 
                     '1837FE6A6AD70C29':'620512', '124BF175470BC117':'137f63', '033EBECC09FAA564':'110e60'}
 
-    fig, ax = plt.subplots(nrows=5, ncols=1, sharex=True, sharey=True, figsize=(15, 13))  
+    fig, ax = plt.subplots(nrows=5, ncols=1, sharex=True, sharey=False, figsize=(15, 13))  
     ax[-1].set_xlabel('Time')
     # ax.set_title('PM Sensor Reading')
 
