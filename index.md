@@ -16,17 +16,21 @@ Our app includes features such as:
 * Lidar: room layout info required for modeling and CFD simulation
 * Database: store collected data online using Firebase
 
-
-![image1](/assets/app_view.png )
+A | B
+- | - 
+![image1](/assets/app_view.png ) | ![image0](/assets/thermal_audio.png )
 <figcaption align = "center"><b>Fig[1]: App Content View</b></figcaption>
 
-![image2](/assets/room_layout.png "Image caption")
-Room Layout Picture and sensor location
 
 
-TODO: Data Collection Process
 
-
+#### Data Collection Process
+We have the testbed setup in a small office room, and we simulated human coughs mechanically using a mannequin, mechanical ventilator, fog machine, and the air compressor. 
+There were six PM sensors set up to measure actual particle concentration in the room.
+![image2](/assets/room_layout.png) 
+<figcaption align = "center"><b>Fig[2]: Sensor Location</b></figcaption>
+![image3](/assets/mannequin.png)
+<figcaption align = "center"><b>Fig[3]: Data Collection Environment with Cough Simulation Mannequin</b></figcaption>
 
 
 ### Results
