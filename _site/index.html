@@ -23,7 +23,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <link rel="stylesheet" href="/assets/css/style.css?v=5321671fe7a2a53db679693d3164ee28b382dd9b">
+    <link rel="stylesheet" href="/assets/css/style.css?v=10ffd7a93b421cc54c07410dc8e80496af9d0ef4">
     <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
 
 <!-- Setup Google Analytics -->
@@ -50,12 +50,33 @@
 
     <main id="content" class="main-content" role="main">
       <h3 id="introduction">Introduction</h3>
-<p>TODO: Motivation + Goals</p>
+<p>Motivation:
+Indoor air quality is very important when it comes to ensuring the safety and comfort of individuals in a variety of settings. However, the existing air quality monitoring systems are often costly and do not fully consider risks assoiated with respiratory droplets and aerosols. Therefore, a tool that can provide information regarding the duration of exposure to resporatory aerosols would prove to be incredibly beneficial. By utilizing such a tool, individuals and organizations would be better equipped to make informed decisions regarding the safety of indoor environments, thereby minimizing the risk of respiratory infections and promoting overall health and well-being.</p>
+
+<p>Goals:
+In this project, we will develop application to monitor resident time of human respiratory aerosols in indoor environment utilizing mobile sensors and machine learning models, with the aim of improving the safety of people, especially in high-risk environment such as hospitals, healthcare facilities, and classrooms. We created the app that can help us to capture syndromic signal such as cough and provide dinformation to optimize safety in dynamic real world setting and use cost effective and accessible to the general public.</p>
 
 <h3 id="methods">Methods</h3>
-<p>TODO: Data Collection APP Development 
-Room Layout Picture and sensor location
-TODO: Data Collection Process</p>
+<h4 id="data-collection-app-development">Data Collection APP Development:</h4>
+<p>We developed iOS application for collection of data and proof of concept deployment of models. <br />
+Our app includes features such as:</p>
+<ul>
+  <li>Audio: capture and classify audio to detect cough</li>
+  <li>Thermal image: detect surface temperatures, human presence, and movement</li>
+  <li>Lidar: room layout info required for modeling and CFD simulation</li>
+  <li>Database: store collected data online using Firebase</li>
+</ul>
+
+<p><img src="/assets/app_view.png" alt="image1" /></p>
+<figcaption align="center"><b>Fig[1]: App Content View</b></figcaption>
+
+<p><img src="/assets/room_layout.png" alt="image2" title="Image caption" />
+Room Layout Picture and sensor location</p>
+
+<p>TODO: Data Collection Process</p>
+
+<h3 id="results">Results</h3>
+<p>TODO: Data visualization</p>
 <html>
 <head><meta charset="utf-8" /></head>
 <body>
@@ -75,18 +96,18 @@ TODO: Data Collection Process</p>
 </body>
 </html>
 
-<h3 id="results">Results</h3>
-<p>TODO: Data visualization
-<img src="/assets/PM2.5_MassConc_Feb8-4.png" alt="image" /></p>
+<p><img src="/assets/room_condition.png" alt="image3" />
+<img src="/assets/model_prediction.png" alt="image4" /></p>
 
 <p>TODO: Modeling and Simulations</p>
 
 <h3 id="conclusion--discussion">Conclusion &amp; Discussion</h3>
+<p>For this project, we have developed models using measured sensor data and simulation data to develop robust models to predict aerosol resident time, and we also performed experiments on human subjects to. In the future, we will continue to improve the model’s accuracy in incorporating sound labels and subject movement.</p>
 
 <h3 id="credits">Credits</h3>
 
 <h3 id="reference">Reference</h3>
-<p>TODO PDF</p>
+<p>[1] Rahman, Tauhidur. Modeling indoor Air quality and Aerosol Transport with Simulation Digital Twins, 2022. University of California, San Diego.</p>
 
 
       <footer class="site-footer">
