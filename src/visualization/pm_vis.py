@@ -3,15 +3,15 @@ import matplotlib.pyplot as plt
 import glob
 from functools import reduce
 
+
 def combine_dataset(file_paths):    
     data_frames = []
     for _file in file_paths:
-        pm_df = pd.read_csv(_file, sep="	", parse_dates=[1])
+        pm_df = pd.read_csv(_file, sep="	", parse_dates=[1], comment='#')
         pm_df['Local_Date_Time'] = pm_df['Local_Date_Time'].dt.floor('S').dt.tz_localize(None)
         pm_df['Time'] = pm_df['Local_Date_Time'].dt.time.astype(str)
         data_frames.append(pm_df)
-
-    combined_df = reduce(lambda left,right: pd.merge(left,right,on='Local_Date_Time'), data_frames)
+    combined_df = reduce(lambda left,right: pd.merge(left,right,on='Time'), data_frames)
     return combined_df
 
 
@@ -51,7 +51,7 @@ def graph(plot_type = "MassConc", PM_size = "2p5", timestamp= 1, interval = 120,
         ax.set_title('PM {} Sensors at Different Location - {}'.format(size[PM_size], trial))
         ax.set_xticks(combined_df['Time'][timestamp:timestamp + interval][::3])
         ax.set_ylabel('{}'.format(concentration[plot_type]))
-        plt.savefig("PM{}_{}_{}.png".format(size[PM_size], plot_type, trial))
+        plt.savefig("PM{}_{}_{}.png".format(size[PM_size], plot_type, trial), bbox_inches="tight",facecolor="white", dpi=300)
         plt.show()
 
 #Feb8-1
