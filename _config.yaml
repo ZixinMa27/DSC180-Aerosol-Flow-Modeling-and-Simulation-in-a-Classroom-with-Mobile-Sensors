@@ -5,3 +5,4 @@ titles_from_headings:
   enabled:     true
   strip_title: true
   collections: true 
+gem "github-pages", group: :jekyll_plugins
