@@ -19,8 +19,8 @@ Our app includes features such as:
 * Database: store collected data online using Firebase
 
 <table><tr>
-<td> <img src="/assets/app_view.png" alt="Drawing" style="width: 400px;"/> </td>
-<td> <img src="/assets/thermal_audio.png" alt="Drawing" style="width: 400px;"/> </td>
+<td> <img src="/assets/app_view.png" alt="Drawing" width= "200"/> </td>
+<td> <img src="/assets/thermal_audio.png" alt="Drawing" width= "200"/> </td>
 <figcaption align = "center"><b>Fig[1]: App Content View</b></figcaption>
 </tr></table>
 
@@ -44,7 +44,7 @@ model-viewer {
 <model-viewer alt="Model of Data Collection Room Setting Produced from LiDAR" src="assets/Uc302.gltf" ar shadow-intensity="1" camera-controls touch-action="pan-y">
 </model-viewer>
 </td>
-<td> <img src="/assets/room_layout.png" alt="Drawing" style="width: 300px;"/> 
+<td> <img src="/assets/room_layout.png" alt="Drawing" width= "200"/> 
 </td>
 </tr></table>
 
@@ -55,8 +55,25 @@ model-viewer {
 
 
 ### Results
-TODO: Data visualization
-{% include figure.html%}
+#### Data visualization
+{% include pm_data_animation.html%}
+
+<table>
+<tr>
+<td> {% include pm2p5_data_low_speed.html width= "100"%}  </td>
+<td> {% include pm2p5_data_medium_speed.html width= "100"%} </td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td> {% include pm2p5_data_high_speed.html%} </td>
+<td> {% include pm2p5_data_no_ac.html%} </td>
+</tr>
+</table>
+
+
+
 ![image5](/assets/PM2.5_Diff_Loc.png)
 ![image3](/assets/room_condition.png)
 ![image4](/assets/model_prediction.png)
