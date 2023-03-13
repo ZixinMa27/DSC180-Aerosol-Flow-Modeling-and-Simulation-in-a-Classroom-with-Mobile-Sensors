@@ -19,9 +19,9 @@ Our app includes features such as:
 * **Database**: store collected data online using Firebase
 
 <table><tr>
-<td> <img src="/assets/app_view.png" alt="Drawing" width= "300"/> </td>
-<td> <img src="/assets/thermal_audio.png" alt="Drawing" width= "300"/> </td>
-<td> <img src="/assets/app_scan_view.png" alt="Drawing" width= "300"/> </td>
+<td> <img src="/assets/app_view.png"  width= "300"/> </td>
+<td> <img src="/assets/thermal_audio.png" width= "300"/> </td>
+<td> <img src="/assets/app_scan_view.png" width= "300"/> </td>
 <p align = "center">
 APP Content View
 </p>
