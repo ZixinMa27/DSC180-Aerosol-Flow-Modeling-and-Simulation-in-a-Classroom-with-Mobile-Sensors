@@ -62,6 +62,8 @@ model-viewer {
 <tr>
 <td> {% include pm2p5_data_low_speed.html width= "100"%}  </td>
 <td> {% include pm2p5_data_medium_speed.html width= "100"%} </td>
+<td> {% include pm2p5_data_high_speed.html%} </td>
+<td> {% include pm2p5_data_no_ac.html%} </td>
 </tr>
 </table>
 
