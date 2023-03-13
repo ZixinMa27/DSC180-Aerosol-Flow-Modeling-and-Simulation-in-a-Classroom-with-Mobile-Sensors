@@ -19,9 +19,9 @@ Our app includes features such as:
 * **Database**: store collected data online using Firebase
 
 <table><tr>
-<td> <img src="/assets/app_view.png"  width= "300"/> </td>
-<td> <img src="/assets/thermal_audio.png" width= "300"/> </td>
-<td> <img src="/assets/app_scan_view.png" width= "300"/> </td>
+<td> <img src="assets/app_view.png"  width= "300"/> </td>
+<td> <img src="assets/thermal_audio.png" width= "300"/> </td>
+<td> <img src="assets/app_scan_view.png" width= "300"/> </td>
 <p align = "center">
 APP Content View
 </p>
@@ -48,7 +48,7 @@ model-viewer {
 <model-viewer alt="Model of Data Collection Room Setting Produced from LiDAR" src="assets/Uc302.gltf" ar shadow-intensity="1" camera-controls touch-action="pan-y">
 </model-viewer>
 </td>
-<td> <img src="/assets/room_layout.png" alt="Drawing" width= "400"/> 
+<td> <img src="assets/room_layout.png" alt="Drawing" width= "400"/> 
 </td>
 </tr></table>
 
