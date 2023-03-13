@@ -26,7 +26,6 @@ Our app includes features such as:
 
 
 
-
 #### Data Collection Process
 We have the testbed setup in a small office room, and we simulated human coughs mechanically using a mannequin, mechanical ventilator, fog machine, and the air compressor. 
 There were six PM sensors set up to measure actual particle concentration in the room.
