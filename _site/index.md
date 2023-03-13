@@ -13,18 +13,22 @@ In this project, we will develop application to monitor resident time of human r
 #### Data Collection APP Development:
 We developed iOS application for collection of data and proof of concept deployment of models. \\
 Our app includes features such as: 
-* Audio: capture and classify audio to detect cough
-* Thermal image: detect surface temperatures, human presence, and movement
-* Lidar: room layout info required for modeling and CFD simulation
-* Database: store collected data online using Firebase
+* **Audio**: capture and classify audio to detect events such as cough, sneeze
+* **Thermal Image**: using a FLIR one camera to detect surface temperatures, and detect human presence, and movement in the thermal image using YOLO model
+* **Lidar and Camera**: capture room layout info and geomtry required for modeling and CFD simulation
+* **Database**: store collected data online using Firebase
 
 <table><tr>
-<td> <img src="/assets/app_view.png" alt="Drawing" width= "200"/> </td>
-<td> <img src="/assets/thermal_audio.png" alt="Drawing" width= "200"/> </td>
-<figcaption align = "center"><b>Fig[1]: App Content View</b></figcaption>
+<td> <img src="/assets/app_view.png" alt="Drawing" width= "300"/> </td>
+<td> <img src="/assets/thermal_audio.png" alt="Drawing" width= "300"/> </td>
+<td> <img src="/assets/app_scan_view.png" alt="Drawing" width= "300"/> </td>
+<p align = "center">
+APP Content View
+</p>
 </tr></table>
 
 
+<iframe width="800" height="450" src="https://youtu.be/suGByOBXNN8" title="APP demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 #### Data Collection Process
 We have the testbed setup in a small office room, and we simulated human coughs mechanically using a mannequin, mechanical ventilator, fog machine, and the air compressor. 
@@ -44,7 +48,7 @@ model-viewer {
 <model-viewer alt="Model of Data Collection Room Setting Produced from LiDAR" src="assets/Uc302.gltf" ar shadow-intensity="1" camera-controls touch-action="pan-y">
 </model-viewer>
 </td>
-<td> <img src="/assets/room_layout.png" alt="Drawing" width= "200"/> 
+<td> <img src="/assets/room_layout.png" alt="Drawing" width= "400"/> 
 </td>
 </tr></table>
 
@@ -53,35 +57,35 @@ model-viewer {
 ![image3](/assets/mannequin.png)
 <figcaption align = "center"><b>Fig[3]: Data Collection Environment with Cough Simulation Mannequin</b></figcaption>
 
+### Data visualization
 
-### Results
-#### Data visualization
+##### Exploratory Data Analysis 
+<table>
+<!-- <caption>Monthly savings</caption>-->
+<tr>
+<td> {% include pm2p5_data_low_speed.html %}  </td>
+<td> {% include pm2p5_data_medium_speed.html%} </td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td> {% include pm2p5_data_high_speed.html%} </td>
+<td> {% include pm2p5_data_no_ac.html%} </td>
+</tr>
+</table>
+
 {% include pm_data_animation.html%}
-
-<table>
-<tr>
-<td> {% include pm2p5_data_low_speed.html width= "100"%}  </td>
-<td> {% include pm2p5_data_medium_speed.html width= "100"%} </td>
-<td> {% include pm2p5_data_high_speed.html%} </td>
-<td> {% include pm2p5_data_no_ac.html%} </td>
-</tr>
-</table>
-
-<table>
-<tr>
-<td> {% include pm2p5_data_high_speed.html%} </td>
-<td> {% include pm2p5_data_no_ac.html%} </td>
-</tr>
-</table>
-
 
 
 ![image5](/assets/PM2.5_Diff_Loc.png)
 ![image3](/assets/room_condition.png)
+
+
+####  Modeling and Simulations
+![image4](/assets/model.png)
 ![image4](/assets/model_prediction.png)
 
-
-TODO: Modeling and Simulations
 
 ### Conclusion & Discussion
 For this project, we have developed models using measured sensor data and simulation data to develop robust models to predict aerosol resident time, and we also performed experiments on human subjects to. In the future, we will continue to improve the model’s accuracy in incorporating sound labels and subject movement.
