@@ -76,7 +76,7 @@ def plot_events_subplot(data_list, plot_type = "MassConc", PM_size = "2p5", y_lo
         fig.savefig("PM{}_Diff_Loc.png".format(size[PM_size]), bbox_inches="tight",facecolor="white", dpi=300)
     else:
         plotly_fig = plotly.tools.mpl_to_plotly(fig)
-        plotly_fig.update_layout(width= 750, height = 400, showlegend= True)
+        plotly_fig.update_layout(width= 700, height = 500, showlegend= True)
         plotly_fig.show()
         pio.write_html(plotly_fig, file='Fig/pm_data_diff_setting.html', auto_open=False)
 
@@ -95,11 +95,16 @@ def ploty_event(df,plot_type = "MassConc", PM_size = "2p5", timestamp= 0, interv
                                 name = label_name[i],
                                 fill=None))   #tozeroy 
     fig.update_layout(
-        title='PM {} Sensors Aerosol Concentration at Different Location - {}'.format(size[PM_size], trial),
+        title='PM{} Sensors Aerosol Concentration at Different Location - {}'.format(size[PM_size], trial),
         xaxis_title="Elapsed Time (sec)",
         yaxis_title='{} (µg/m3)'.format(concentration[plot_type]),
-        legend_title="Sensor Location"
+        legend_title="Sensor Location",
+        width= 500, 
+        height = 300,
+        showlegend = True,
+        font = dict(size = 8)
     )
+    
     fig.show()
     pio.write_html(fig, file='Fig/pm{}_data_{}.html'.format(PM_size,trial), auto_open=False)
 
