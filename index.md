@@ -1,4 +1,6 @@
 ## Modeling and Simulation of Aerosol Flow with Mobile Sensors
+## Team Members: Zixin Ma, Jiali Qian, Yidan Wang 
+## Mentors: Professor Tauhidur Rahman, PhD Tanjid Hasan Tonmoy
 
 ### Introduction
 Motivation:
@@ -16,7 +18,7 @@ Our app includes features such as:
 * Lidar: room layout info required for modeling and CFD simulation
 * Database: store collected data online using Firebase
 
-A | B
+
 - | - 
 ![image1](/assets/app_view.png ) | ![image0](/assets/thermal_audio.png )
 <figcaption align = "center"><b>Fig[1]: App Content View</b></figcaption>
@@ -27,8 +29,27 @@ A | B
 #### Data Collection Process
 We have the testbed setup in a small office room, and we simulated human coughs mechanically using a mannequin, mechanical ventilator, fog machine, and the air compressor. 
 There were six PM sensors set up to measure actual particle concentration in the room.
-![image2](/assets/room_layout.png) 
-<figcaption align = "center"><b>Fig[2]: Sensor Location</b></figcaption>
+<table><tr>
+<td>
+<!-- Import the component -->
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
+
+<!-- Use it like any other HTML element -->
+<style>
+model-viewer {
+  width: 400px;
+  height: 600px;
+}
+</style>
+<model-viewer alt="Model of Data Collection Room Setting Produced from LiDAR" src="assets/Uc302.gltf" ar shadow-intensity="1" camera-controls touch-action="pan-y">
+</model-viewer>
+</td>
+<td> <img src="/assets/room_layout.png" alt="Drawing" style="width: 300px;"/> 
+</td>
+</tr></table>
+
+
+
 ![image3](/assets/mannequin.png)
 <figcaption align = "center"><b>Fig[3]: Data Collection Environment with Cough Simulation Mannequin</b></figcaption>
 
@@ -45,8 +66,6 @@ TODO: Modeling and Simulations
 
 ### Conclusion & Discussion
 For this project, we have developed models using measured sensor data and simulation data to develop robust models to predict aerosol resident time, and we also performed experiments on human subjects to. In the future, we will continue to improve the model’s accuracy in incorporating sound labels and subject movement.
-
-### Credits
 
 ### Reference
 [1] Rahman, Tauhidur. Modeling indoor Air quality and Aerosol Transport with Simulation Digital Twins, 2022. University of California, San Diego.
