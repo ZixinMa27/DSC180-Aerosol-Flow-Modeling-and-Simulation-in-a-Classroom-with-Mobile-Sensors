@@ -18,10 +18,11 @@ Our app includes features such as:
 * Lidar: room layout info required for modeling and CFD simulation
 * Database: store collected data online using Firebase
 
-
-- | - 
-![image1](/assets/app_view.png ) | ![image0](/assets/thermal_audio.png )
+<table><tr>
+<td> <img src="/assets/app_view.png" alt="Drawing" style="width: 400px;"/> </td>
+<td> <img src="/assets/thermal_audio.png" alt="Drawing" style="width: 400px;"/> </td>
 <figcaption align = "center"><b>Fig[1]: App Content View</b></figcaption>
+</tr></table>
 
 
 
@@ -57,7 +58,7 @@ model-viewer {
 ### Results
 TODO: Data visualization
 {% include figure.html%}
-
+![image5](/assets/PM2.5_Diff_Loc.png)
 ![image3](/assets/room_condition.png)
 ![image4](/assets/model_prediction.png)
 
