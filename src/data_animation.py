@@ -29,7 +29,7 @@ col_names =['Epoch_UTC', 'Local_Date_Time', 'MassConc_1p0',
        'TypPartSize', 'id', 'x', 'y', 'z', 'loc']
 
 
-def plot_3d(file_paths, plot_col = 'MassConc_2p5',start_ts = 50, end_ts =250):
+def plot_3d(file_paths, plot_col = 'MassConc_2p5',start_ts = 250, end_ts =400, trial = "High-Fan-Speed"):
     data_frames = []
     for i, _file in enumerate(file_paths):
         #df = pd.read_csv(_file, sep="	 ", parse_dates=[1], error_bad_lines='skip')
@@ -49,10 +49,11 @@ def plot_3d(file_paths, plot_col = 'MassConc_2p5',start_ts = 50, end_ts =250):
         data_frames.append(df.iloc[start_ts:end_ts, :])
     
     combined_df = pd.concat(data_frames, axis=0)
+    combined_df['time_elapsed'] = combined_df['time_elapsed'] - start_ts
     min_conc_val = combined_df[plot_col].min()
     max_conc_val = combined_df[plot_col].max()
     fig = px.scatter_3d(combined_df,x='x', y='y', z='z', text='loc', color= plot_col, size= plot_col, animation_frame='time_elapsed', size_max=50, range_color=[min_conc_val, max_conc_val])
-    fig.update_layout(title_text='Sensors Location in a Room', title_x= 0.43, width= 750, height = 400)
+    fig.update_layout(title_text='Aerosol Concentration Changes Following a Cough  {}'.format(trial), title_x= 0.43, width= 750, height = 400)
     fig.update_layout(
         scene = dict(
             xaxis = dict(nticks=5, range=[0,1],),

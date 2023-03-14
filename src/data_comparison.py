@@ -73,7 +73,7 @@ def plot_events_subplot(data_list, plot_type = "MassConc", PM_size = "2p5", y_lo
     ax[-1].set_xlabel('Elapsed Time (sec)')
     if plot_backend == "mpl":
         plt.show()
-        fig.savefig("PM{}_Diff_Loc.png".format(size[PM_size]), bbox_inches="tight",facecolor="white", dpi=300)
+        fig.savefig("Fig/PM{}_Diff_Loc.png".format(size[PM_size]), bbox_inches="tight",facecolor="white", dpi=300)
     else:
         plotly_fig = plotly.tools.mpl_to_plotly(fig)
         plotly_fig.update_layout(width= 700, height = 500, showlegend= True)
