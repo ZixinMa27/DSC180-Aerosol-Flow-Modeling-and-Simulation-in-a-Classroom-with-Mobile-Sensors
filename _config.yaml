@@ -6,3 +6,6 @@ titles_from_headings:
   strip_title: true
   collections: true 
 gem "github-pages", group: :jekyll_plugins
+
+title: [The title of your site]
+description: [Team Members Zixin Ma, Jiali Qian, Yidan Wang]

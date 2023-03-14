@@ -1,4 +1,4 @@
-## Modeling and Simulation of Aerosol Flow with Mobile Sensors
+### Modeling and Simulation of Aerosol Flow with Mobile Sensors
 ## Team Members: Zixin Ma, Jiali Qian, Yidan Wang 
 ## Mentors: Professor Tauhidur Rahman, PhD Tanjid Hasan Tonmoy
 
@@ -19,9 +19,9 @@ Our app includes features such as:
 * **Database**: store collected data online using Firebase
 
 <table><tr>
-<td> <img src="/assets/app_view.png"  width= "300"/> </td>
-<td> <img src="/assets/thermal_audio.png" width= "300"/> </td>
-<td> <img src="/assets/app_scan_view.png" width= "300"/> </td>
+<td> <img src="assets/app_view.png"  width= "300"/> </td>
+<td> <img src="assets/thermal_audio.png" width= "300"/> </td>
+<td> <img src="assets/app_scan_view.png" width= "300"/> </td>
 <p align = "center">
 APP Content View
 </p>
@@ -31,8 +31,7 @@ APP Content View
 <iframe width="800" height="450" src="https://youtu.be/suGByOBXNN8" title="APP demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 #### Data Collection Process
-We have the testbed setup in a small office room, and we simulated human coughs mechanically using a mannequin, mechanical ventilator, fog machine, and the air compressor. 
-There were six PM sensors set up to measure actual particle concentration in the room.
+We established a test environment in a compact office space (approx. dimenisions - 3.2m, 2.6m, 3.2m), where we mechanically simulated human coughs and captured aerosol concentrations using particulate matter (PM) sensors. The cough simulation involved a mannequin, mechanical ventilator, fog machine, and air compressor. To measure the actual particle concentration in the room, we installed six PM sensors.
 <table><tr>
 <td>
 <!-- Import the component -->
@@ -48,26 +47,27 @@ model-viewer {
 <model-viewer alt="Model of Data Collection Room Setting Produced from LiDAR" src="assets/Uc302.gltf" ar shadow-intensity="1" camera-controls touch-action="pan-y">
 </model-viewer>
 </td>
-<td> <img src="/assets/room_layout.png" alt="Drawing" width= "400"/> 
+<td> <img src="assets/room_layout.png" alt="Drawing" width= "400"/> 
 </td>
 </tr></table>
 
 
 
 ![image3](/assets/mannequin.png)
-<figcaption align = "center"><b>Fig[3]: Data Collection Environment with Cough Simulation Mannequin</b></figcaption>
+<figcaption align = "center"><b> Data Collection Environment with Cough Simulation Mannequin</b></figcaption>
 
 ### Data visualization
 
 ##### Exploratory Data Analysis 
+Our exploratory data visualization has revealed that the dispersion and duration of aerosol concentrations at various sensor locations varies under different fan speed settings during a cough event. 
+
 <table>
-<!-- <caption>Monthly savings</caption>-->
+<caption>Impact of Fan Speed and Sensor Location on Aerosol Concentrations </caption>
 <tr>
 <td> {% include pm2p5_data_low_speed.html %}  </td>
 <td> {% include pm2p5_data_medium_speed.html%} </td>
 </tr>
 </table>
-
 <table>
 <tr>
 <td> {% include pm2p5_data_high_speed.html%} </td>
@@ -75,16 +75,82 @@ model-viewer {
 </tr>
 </table>
 
+To better illustrate these differences, we used a log scale graph and an aerosol concentration at exhaust location graph for comparison. We observed that in the absence of air conditioning, aerosols tend to persist in a room for a longer time and disperse and disappear at a slower rate than when the fan is turned on. Furthermore, under high-speed fan settings, aerosol concentration is lower and disperses faster than under low-speed settings. This suggests that the air exchange rate in the room plays a critical role in the changes in aerosol concentration.
+
+![image5](/assets/PM2.5_Diff_Loc.png)
+![image5](/assets/conc_exhuast.png)
+
+The following animation helps to visualize how the aerosol concentration in a room changes after a cough event.
+
 {% include pm_data_animation.html%}
 
 
-![image5](/assets/PM2.5_Diff_Loc.png)
+We also conducted experiments under three different room conditions. The first one involved leaving the door open during the cough simulation event. The second condition involved keeping the door closed during the cough simulation event. In the third condition, the door was closed during the cough simulation event and then opened afterward. We discovered that air flow also plays a crucial role in the changes in aerosol concentration. When the door is open, the aerosol concentration is significantly lower than when the door is closed, which suggests that the exchange of air with the surrounding environment can help to reduce the concentration of aerosols in the room.
+
 ![image3](/assets/room_condition.png)
 
 
 ####  Modeling and Simulations
-![image4](/assets/model.png)
+
+#### Compartment Model
+We utilized the compartment model to forecast the aerosol concentration, but for simplicity, we neglected the sinks (settling) factor and focused solely on the aerosol concentration in the perfectly mixed parent compartment.
+<table>
+<tr><td>
+<table>
+  <tr>
+    <th>Variable</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td> <math><msub><mi>V</mi><mi>p</mi></msub></math></td>
+    <td> Volume of parent compartment</td>
+  </tr>
+  <tr>
+    <td><math><msub><mi>V</mi><mi>s</mi></msub></math></td>
+    <td> Volume of sub-compartment</td>
+  </tr>
+  <tr>
+    <td><math><mi>Q</mi></math></td>
+    <td> Room air exchange rate</td>
+  </tr>
+  <tr>
+    <td><math><msub><mi>C</mi><mi>p</mi></msub></math></td>
+    <td> Aerosol concentration in the perfectly mixed parent compartment</td>
+  </tr>
+  <tr>
+    <td><math><msub><mi>C</mi><mi>s</mi></msub></math></td>
+    <td> Aerosol concentration in the perfectly mixed sub-compartment</td>
+  </tr>
+  <tr>
+    <td><math><mi>α</mi></math></td>
+    <td> Compartment coupling coefficient</td>
+  </tr>
+  <tr>
+    <td><math><mi>t</mi></math></td>
+    <td> Time</td>
+  </tr>
+  <tr>
+    <td><math><msub><mi>G</mi><mi>p</mi></msub></math></td>
+    <td> Settling rate factor in parent compartment</td>
+  </tr>
+  <tr>
+    <td><math><msub><mi>G</mi><mi>s</mi></msub></math></td>
+    <td> Settling rate for factor in sub-compartment</td>
+  </tr>
+</table> </td>
+<td> <img src="assets/model.png" alt="model" width= "400"/> </td>
+</tr>
+</table> 
+
+
+
+#### Model Prediction
 ![image4](/assets/model_prediction.png)
+
+#### Computational Fluid Dynamics Simulation 
+Aside from modeling, we also utilized professional simulation software to validate our data collection process, especially the locations where we should put the PM sensors. The software is Ansys Discovery, a computational fluid dynamics simulation tool that can model airflows in an enclosed space. From the figure below, it is clear that when airflow attempts to pass through the different furnitures in the room, the air is likely to be disrupted and form a vortex which can have temporarily increased aerosol concentration in the room. The simulation serves as an extra data source for us to make sure that we are doing things correctly. However, due to our limited knowledge about CFD, the simulation setting still needs some work before being able to simulate actual coughing. As of right now, the software provides us with an opportunity to examine the possible airflow conditions in the test room.
+
+![image6](/assets/discovery_sim.png)
 
 
 ### Conclusion & Discussion
