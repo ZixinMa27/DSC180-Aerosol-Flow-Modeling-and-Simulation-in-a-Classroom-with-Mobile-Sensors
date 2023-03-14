@@ -7,5 +7,9 @@ titles_from_headings:
   collections: true 
 gem "github-pages", group: :jekyll_plugins
 
+
 #title: [Modeling and Simulation of Aerosol Flow with Mobile Sensors]
-description: ["Team Members: Zixin Ma, Jiali Qian, Yidan Wang \n Mentors: Professor Tauhidur Rahman, PhD Tanjid Hasan Tonmoy"]
+description:  > 
+  Team Members: Zixin Ma, Jiali Qian, Yidan Wang 
+  \n
+  Mentors: Professor Tauhidur Rahman, PhD Tanjid Hasan Tonmoy.

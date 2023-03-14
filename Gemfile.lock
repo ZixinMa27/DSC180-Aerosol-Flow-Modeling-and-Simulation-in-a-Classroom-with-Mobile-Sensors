@@ -270,6 +270,7 @@ PLATFORMS
 DEPENDENCIES
   github-pages
   jekyll
+  jekyll-paginate
   nokogiri
   rack (~> 2.2.4)
   rspec
