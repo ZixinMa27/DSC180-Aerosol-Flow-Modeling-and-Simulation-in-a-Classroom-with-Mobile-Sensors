@@ -1,16 +1,13 @@
-### Modeling and Simulation of Aerosol Flow with Mobile Sensors
-## Team Members: Zixin Ma, Jiali Qian, Yidan Wang 
-## Mentors: Professor Tauhidur Rahman, PhD Tanjid Hasan Tonmoy
-
-### Introduction
+## Modeling and Simulation of Aerosol Flow with Mobile Sensors
+## Introduction
 Motivation:
 Indoor air quality is very important when it comes to ensuring the safety and comfort of individuals in a variety of settings. However, the existing air quality monitoring systems are often costly and do not fully consider risks assoiated with respiratory droplets and aerosols. Therefore, a tool that can provide information regarding the duration of exposure to resporatory aerosols would prove to be incredibly beneficial. By utilizing such a tool, individuals and organizations would be better equipped to make informed decisions regarding the safety of indoor environments, thereby minimizing the risk of respiratory infections and promoting overall health and well-being.
 
 Goals:
 In this project, we will develop application to monitor resident time of human respiratory aerosols in indoor environment utilizing mobile sensors and machine learning models, with the aim of improving the safety of people, especially in high-risk environment such as hospitals, healthcare facilities, and classrooms. We created the app that can help us to capture syndromic signal such as cough and provide dinformation to optimize safety in dynamic real world setting and use cost effective and accessible to the general public.
 
-### Methods
-#### Data Collection APP Development:
+## Methods
+### Data Collection APP Development
 We developed iOS application for collection of data and proof of concept deployment of models. \\
 Our app includes features such as: 
 * **Audio**: capture and classify audio to detect events such as cough, sneeze
@@ -30,7 +27,7 @@ APP Content View
 
 <iframe width="800" height="450" src="https://youtu.be/suGByOBXNN8" title="APP demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-#### Data Collection Process
+### Data Collection Process
 We established a test environment in a compact office space (approx. dimenisions - 3.2m, 2.6m, 3.2m), where we mechanically simulated human coughs and captured aerosol concentrations using particulate matter (PM) sensors. The cough simulation involved a mannequin, mechanical ventilator, fog machine, and air compressor. To measure the actual particle concentration in the room, we installed six PM sensors.
 <table><tr>
 <td>
@@ -58,7 +55,7 @@ model-viewer {
 
 ### Data visualization
 
-##### Exploratory Data Analysis 
+#### Exploratory Data Analysis 
 Our exploratory data visualization has revealed that the dispersion and duration of aerosol concentrations at various sensor locations varies under different fan speed settings during a cough event. 
 
 <table>
@@ -90,9 +87,9 @@ We also conducted experiments under three different room conditions. The first o
 ![image3](/assets/room_condition.png)
 
 
-####  Modeling and Simulations
+##  Modeling and Simulations
 
-#### Compartment Model
+### Compartment Model
 We utilized the compartment model to forecast the aerosol concentration, but for simplicity, we neglected the sinks (settling) factor and focused solely on the aerosol concentration in the perfectly mixed parent compartment.
 <table>
 <tr><td>
@@ -142,19 +139,17 @@ We utilized the compartment model to forecast the aerosol concentration, but for
 </tr>
 </table> 
 
-
-
-#### Model Prediction
+### Model Prediction
 ![image4](/assets/model_prediction.png)
 
-#### Computational Fluid Dynamics Simulation 
+### Computational Fluid Dynamics Simulation 
 Aside from modeling, we also utilized professional simulation software to validate our data collection process, especially the locations where we should put the PM sensors. The software is Ansys Discovery, a computational fluid dynamics simulation tool that can model airflows in an enclosed space. From the figure below, it is clear that when airflow attempts to pass through the different furnitures in the room, the air is likely to be disrupted and form a vortex which can have temporarily increased aerosol concentration in the room. The simulation serves as an extra data source for us to make sure that we are doing things correctly. However, due to our limited knowledge about CFD, the simulation setting still needs some work before being able to simulate actual coughing. As of right now, the software provides us with an opportunity to examine the possible airflow conditions in the test room.
 
 ![image6](/assets/discovery_sim.png)
 
 
-### Conclusion & Discussion
+## Conclusion & Discussion
 For this project, we have developed models using measured sensor data and simulation data to develop robust models to predict aerosol resident time, and we also performed experiments on human subjects to. In the future, we will continue to improve the model’s accuracy in incorporating sound labels and subject movement.
 
-### Reference
+## Reference
 [1] Rahman, Tauhidur. Modeling indoor Air quality and Aerosol Transport with Simulation Digital Twins, 2022. University of California, San Diego.
