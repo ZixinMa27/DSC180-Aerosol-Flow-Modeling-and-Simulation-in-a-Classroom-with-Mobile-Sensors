@@ -25,7 +25,7 @@ APP Content View
 </tr></table>
 
 
-<iframe width="800" height="450" src="https://youtu.be/suGByOBXNN8" title="APP demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="800" height="450" src="https://youtu.be/suGByOBXNN8" title="APP demo" frameborder="0" allowfullscreen></iframe>
 
 ### Data Collection Process
 We established a test environment in a compact office space (approx. dimenisions - 3.2m, 2.6m, 3.2m), where we mechanically simulated human coughs and captured aerosol concentrations using particulate matter (PM) sensors. The cough simulation involved a mannequin, mechanical ventilator, fog machine, and air compressor. To measure the actual particle concentration in the room, we installed six PM sensors.
