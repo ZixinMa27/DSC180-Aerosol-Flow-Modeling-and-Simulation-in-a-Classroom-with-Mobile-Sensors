@@ -11,3 +11,6 @@ gem "github-pages", group: :jekyll_plugins
 description: 
   - "Team Members: Zixin Ma, Jiali Qian, Yidan Wang"
   - "Mentors: Professor Tauhidur Rahman, PhD Tanjid Hasan Tonmoy"
+tagline: |
+  Team Members: Zixin Ma, Jiali Qian, Yidan Wang
+  Mentors: Professor Tauhidur Rahman, PhD Tanjid Hasan Tonmoy
