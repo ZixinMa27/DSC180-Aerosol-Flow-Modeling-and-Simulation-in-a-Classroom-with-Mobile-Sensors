@@ -143,7 +143,7 @@ To better illustrate these differences, we used a log scale graph and an aerosol
         <img style="width: 400px; height: 350px" src='assets/conc_exhuast.png' />
      </td>
      <td>
-     <figcaption style="width: 400px"> **Observation**: In the absence of air conditioning, aerosols tend to persist in a room for a longer time and disperse and disappear at a slower rate than when the fan is turned on. Furthermore, under high-speed fan settings, aerosol concentration is lower and disperses faster than under low-speed settings. This suggests that the air exchange rate in the room plays a critical role in the changes in aerosol concentration.</figcaption>
+     <figcaption style="width: 400px"> In the absence of air conditioning, aerosols tend to persist in a room for a longer time and disperse and disappear at a slower rate than when the fan is turned on. Furthermore, under high-speed fan settings, aerosol concentration is lower and disperses faster than under low-speed settings. This suggests that the air exchange rate in the room plays a critical role in the changes in aerosol concentration.</figcaption>
      </td>
   </tr>
 </table>
