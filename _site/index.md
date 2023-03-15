@@ -27,7 +27,7 @@ APP Content View
 </tr></table>
 
 
-<iframe width="800" height="450" src="https://youtu.be/embed/suGByOBXNN8" title="APP demo" frameborder="0" allowfullscreen></iframe>
+<iframe width="800" height="450" src="https://youtube/embed/suGByOBXNN8" title="APP demo" frameborder="0" allowfullscreen></iframe>
 
 #### Tools for Measuring Aerosol Concentrations
 
@@ -372,4 +372,4 @@ For this project, we have developed models using measured sensor data and simula
 [1] Rahman, Tauhidur. Modeling indoor Air quality and Aerosol Transport with Simulation Digital Twins, 2022. University of California, San Diego. <br>
 [2] The Engineering Toolbox. Air Change Rates in Typical Rooms and Buildings. https://www.engineeringtoolbox.com/air-change-rate-room-d_867.html <br>
 [3] A Perez, J Penaloza Gutierrez, A Tejada-Martinez - APS Division of Fluid Dynamics Meeting Abstracts, 2021. Two-compartment modeling of a hospital isolation room informed by CFD <br>
-[4] Cough simulator - George Zhou, Garrett W. Burnett, Ronak S. Shah, Cheuk Yin Lai, Daniel Katz, and Eric A. Fried. Development of an Easily Reproducible Cough Simulator With Droplets and Aerosols for Rapidly Testing Novel Personal Protective Equipment. Simulation in Healthcare: The Journal of the Society for Simulation in Healthcare, Publish Ahead of Print, March 2022 <br>
+[4] George Zhou, Garrett W. Burnett, Ronak S. Shah, Cheuk Yin Lai, Daniel Katz, and Eric A. Fried. Development of an Easily Reproducible Cough Simulator With Droplets and Aerosols for Rapidly Testing Novel Personal Protective Equipment. Simulation in Healthcare: The Journal of the Society for Simulation in Healthcare, Publish Ahead of Print, March 2022 <br>
