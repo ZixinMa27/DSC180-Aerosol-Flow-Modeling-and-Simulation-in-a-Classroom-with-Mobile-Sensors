@@ -143,7 +143,7 @@ To better illustrate these differences, we used a log scale graph and an aerosol
         <img style="width: 400px; height: 350px" src='assets/conc_exhuast.png' />
      </td>
      <td>
-     <figcaption style="width: 400px"> Observation: In the absence of air conditioning, aerosols tend to persist in a room for a longer time and disperse and disappear at a slower rate than when the fan is turned on. Furthermore, under high-speed fan settings, aerosol concentration is lower and disperses faster than under low-speed settings. This suggests that the air exchange rate in the room plays a critical role in the changes in aerosol concentration.</figcaption>
+     <figcaption style="width: 400px"> **Observation**: In the absence of air conditioning, aerosols tend to persist in a room for a longer time and disperse and disappear at a slower rate than when the fan is turned on. Furthermore, under high-speed fan settings, aerosol concentration is lower and disperses faster than under low-speed settings. This suggests that the air exchange rate in the room plays a critical role in the changes in aerosol concentration.</figcaption>
      </td>
   </tr>
 </table>
@@ -154,7 +154,7 @@ We also conducted experiments under three different room conditions. <br>
 2. Keeping the door closed during the cough simulation event. 
 3. The door was closed during the cough simulation event and then opened afterward. 
 
-Observation: We discovered that air flow also plays a crucial role in the changes in aerosol concentration. When the door is open, the aerosol concentration is significantly lower than when the door is closed, which suggests that the exchange of air with the surrounding environment can help to reduce the concentration of aerosols in the room. Conversely, the resident time for aerosols was longer in enclosed environments.
+**Observation**: We discovered that air flow also plays a crucial role in the changes in aerosol concentration. When the door is open, the aerosol concentration is significantly lower than when the door is closed, which suggests that the exchange of air with the surrounding environment can help to reduce the concentration of aerosols in the room. Conversely, the resident time for aerosols was longer in enclosed environments.
 
 
 ![image3](/assets/room_condition.png)
@@ -288,7 +288,7 @@ Our predictions of aerosol concentration are heavily influenced by the air excha
   </tr>
   <tr>
     <td><math><mi>Q</mi></math></td>
-    <td> 4</td>
+    <td> 13</td>
   </tr>
   <tr>
     <td>Initial <math><msub><mi>C</mi><mi>p</mi></msub></math></td>
@@ -300,7 +300,7 @@ Our predictions of aerosol concentration are heavily influenced by the air excha
   </tr>
   <tr>
     <td><math><mi>α</mi></math></td>
-    <td> 0.4</td>
+    <td> 0.05</td>
   </tr>
   <tr>
     <td><math><mi>t</mi></math></td>
@@ -334,7 +334,7 @@ Our predictions of aerosol concentration are heavily influenced by the air excha
   </tr>
   <tr>
     <td><math><mi>Q</mi></math></td>
-    <td> 4</td>
+    <td> 3</td>
   </tr>
   <tr>
     <td>Initial <math><msub><mi>C</mi><mi>p</mi></msub></math></td>
@@ -346,7 +346,7 @@ Our predictions of aerosol concentration are heavily influenced by the air excha
   </tr>
   <tr>
     <td><math><mi>α</mi></math></td>
-    <td> 0.4</td>
+    <td> 0.8</td>
   </tr>
   <tr>
     <td><math><mi>t</mi></math></td>
@@ -367,7 +367,7 @@ Aside from modeling, we also utilized professional simulation software to valida
 
 
 ## Conclusion & Discussion
-For this project, we have developed models using measured sensor data and simulation data to develop robust models to predict aerosol resident time. In the future, we woill continue work on compartment model and we need a better way to determine the value of alpha and the air exchange rate instead of manually tuning parameters. We will continue to improve the model’s accuracy in incorporating sound labels and subject movement.
+For this project, we have developed models using measured sensor data and simulation data to develop robust models to predict aerosol resident time. In the future, we will continue work on compartment model and we need a better way to determine the value of alpha and the air exchange rate instead of manually tuning parameters. We will continue to improve the model’s accuracy in incorporating sound labels and subject movement.
 
 ## Reference
 [1] Rahman, Tauhidur. Modeling indoor Air quality and Aerosol Transport with Simulation Digital Twins, 2022. University of California, San Diego. <br>
